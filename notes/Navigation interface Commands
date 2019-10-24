@@ -1,0 +1,17 @@
+In webdriver interface we have Navigation interface
+which contains several methods to automate browser navigations
+like forward, backward and refersh
+
+WebDriver interface have navigate() which returns Navigation 
+interface reference and we can use that reference to
+call Navigation interface methods
+
+Navigation interface methods
+1. to(String arg): is used to navigate to a url specified as String value
+2. to(URL arg) : is used to navigate to a url specified as  a URL class object
+the first to method which accept url as string argument will not verify
+the url format at compile time but 2nd method will verify url format
+at compile time
+3. back() is used to automate back button of the browser window
+4. forward() is used to automate forward button of the browser window
+5. refresh() is used to automate refersh button of the browser window 
