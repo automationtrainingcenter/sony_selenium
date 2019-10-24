@@ -1,0 +1,24 @@
+WINDOW MANAGEMENT
+In WebDriver interface we have manage() which returns Options interface reference
+In Options interface we have window() which returns Window interface reference
+we can use this reference to call the methods of Window interface
+
+Window interface methods
+which are used to manage browser window opened by driver instance
+
+1. maximize(): which will maximizes the browser window
+2. fullScreen(): which will full screen(F11 mode) the 
+browser window
+3. getSize(): returns Dimension class object i.e. the 
+height and width of the browser window. 
+Dimension class contains two methods getWidth() returns width
+of the browser window and getHeight() returns height of the 
+browser window.
+4. getPosition(): returns position of the browser window
+from top left corner of the screen as a Point class object.
+Point class contains two methods, getX() returns x axis position 
+and getY() returns Y asix position.
+5. setSize(Dimestion arg): set the size of the browser window 
+to the specified width and height using Dimension class object
+6. setPosition(Point arg): set the position of the browser window
+from the top left corner of the screen using Point class object 
