@@ -1,0 +1,48 @@
+WebElement interface methods
+This interface contains methods to perform common actions on the element
+
+1. click() is used to click on an element 
+
+2. sendKeys(CharSequence arg) is used to type some data in a text field and text
+area. This method will send data character by character.
+
+3. clear() is used to clear existing data in the text field or text area.
+
+4. getText() returns String value which is an inner text of the given element if any
+
+5. submit() is used to submit a form to the server if that form submit button is
+implemented using <input> tag
+
+6. getAttribute(String att_name) returns a String which is attribute value of the given 
+attribute name
+
+7. getCssValue(String css_property_name) returns a String which is value of the 
+given css property name
+
+8. getSize() returns Dimension class object which is height and width of the given element
+
+9. getLocation() returns Point class object which is x and y coordinate values of the element
+in the web page from top left cornor
+
+10. getTagName() returns name of the tag of given element
+
+11. findElement(By arg) returns WebElement interface reference this method will
+locate an element in the GIVEN ELEMENT based on the locating technique we
+specified using 'By' class and stores in a WebElement reference. If no
+element is present in the page with locating technique then this method will
+throw NoSuchElementException
+
+12. findElements(By arg) returns a java.util.List of WebElement type this method
+will locate either zero or more elements in the GIVEN ELEMENT based on the
+locating technique we specified using 'By' class and store in
+List<WebElement>. if no element is present in the page with locating
+technique then this method will return a List of size 0.
+
+13. isDisplayed() returns true if given element is displayed in the web page
+
+14. isEnabled() returns true if given element is in active mode or enabled mode
+
+15. isSelected() returns true if given option of either dropdown list or list box or 
+radio button or check box is selected.
+
+
