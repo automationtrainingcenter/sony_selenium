@@ -1,0 +1,22 @@
+Alert interface methods
+
+accept() - clicks on OK button of the alert
+dismiss() - clicks on cancel button of the alert if it contains 
+else it click ok button of alert
+getText() returns String value i.e. the text of alert
+sendKeys(String arg) send some data to the text field of alert if 
+it contains any
+
+To handle alerts we have to Switch driver focus from web page to the
+alert using switchTo() of WebDriver interface.
+This switchTo() returns TargetLocator interface reference
+This TargetLocator is in inner interface of WebDriver interface and it 
+contains several methods to switch driver focus from current web page 
+to specified things (like an alert or an active element in the page or
+to frame or to a child window)
+
+TargetLocator tl = driver.switchTo();
+Alert alert = tl.alert();
+
+to write above lines of code in single line
+Alert alert = driver.switchTo().alert();

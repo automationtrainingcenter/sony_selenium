@@ -1,0 +1,32 @@
+TargetLocator interface methods
+1. alert() - returns an Alert interface reference
+is used to switch driver focus from current web page to existing alert
+on the page. if no alert is availble in the page then this
+method will return NoSuchAlertException
+
+2. activeElement() - returns a WebElement reference
+is used to switch driver focus to the active element in the current web page.
+if there is no active elemetn in the web page then this method will throw 
+NoSuchElementException
+
+Frames handling methods
+3. frame(int index) - used to switch driver focus from main page to any frame
+based on index number of the frame
+
+4. frame(String id\name) - used to switch driver focus from main page to any frame
+based on frame id or name attribute value
+
+5. frame(WebElement frameEle) - used to switch driver focus from main page to any frame
+based on frame by locating that frame and storing in WebElement reference
+
+6. parentFrame() - is used to switch driver focus from an inner frame or child frame
+to parent frame 
+
+7. defaultContent() - is used to swithc driver focus from any frame to main page
+
+// all the frame methods returns WebDriver reference
+
+
+Window handling method
+8. window(String windowID) is used to switch the driver focus from one
+window to another window based on windowID
