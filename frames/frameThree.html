@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Frame Three</title>
+    <style>
+        body{
+            font-family: fantasy;
+            margin: 5px;
+        }
+        #leftcontainer{
+            float:left;
+        }
+        h1{
+            text-align: left;
+            
+        }
+        iframe{
+            float: right;
+            width: 50%;
+            height: 300px;
+            
+        }
+        #click{
+            
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="leftcontainer">
+            <h1>This is Frame Three</h1>
+            <input id="click" type="button" value="click here" onclick="changeColor()"/>
+        </div>
+        <iframe src="http://www.guru99.com/"></iframe>
+     </div>
+     
+    <script type="text/javascript">
+        var col = document.body.style.backgroundColor;
+        var container = document.body;
+        function changeColor(){
+            if(container.style.backgroundColor == "aqua"){
+                container.style.backgroundColor = col;
+            }else{
+                container.style.backgroundColor = "aqua";
+            }
+        };
+    </script>
+</body>
+</html>

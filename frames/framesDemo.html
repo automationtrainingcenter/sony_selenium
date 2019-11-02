@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Frames Demo</title>
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+            font-family: fantasy;
+
+        }
+         h1{
+            text-align: center;
+            margin-bottom: 3px;
+            margin-top: 0px;
+            padding: 0px;
+             
+        }
+        #links{
+            width: 400px;
+            margin: 5px auto;
+        }
+        a{
+            color: green;
+            float:left;
+            display: block;
+            margin-left: 20px;
+            margin-bottom: 5px;
+            padding: 5px 20px;
+            font-size: 1.3em;
+            font-weight: bold;
+            border: 1px  solid blanchedalmond;
+            background-color: blanchedalmond;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        a:hover{
+            background-color: dimgray;
+            color: whitesmoke;
+        }
+        div{
+            clear: both;
+        }
+        iframe{
+            border: 2px solid blue;
+            width: 49%;
+            margin: 0px 3px;
+        }
+        #fthree{
+         width: 99%;   
+        }
+        
+    </style>
+    
+</head>
+<body>
+  
+    <h1>Main Page</h1>
+    <div id="links">
+        <a href="#" id="opentTab" onclick="tabs()">Open Tabs</a>
+        <a href="#" id="opentWin" onclick="windows()">Open Windows</a>
+    </div>
+    <div></div>
+    <iframe id="fone" name="fone" src="frameOne.html" onload="setHeight()"></iframe>
+    <iframe id="ftwo" name="ftwo" onload="this.style.height = (document.documentElement.clientHeight/2)-30+'px';" src="frameTwo.html"></iframe>
+    <iframe id="fthree" onload="this.style.height = (document.documentElement.clientHeight/2)-30+'px';" name="three" src="frameThree.html"></iframe>
+  
+</body>
+<script>
+    function setHeight(){
+        var height = (document.documentElement.clientHeight/2)-30;
+        document.getElementById("fone").style.height = height+'px';
+    };
+    
+    function tabs(){
+        window.open("http://www.google.com");
+        window.open("http://www.youtube.com");
+        window.open("http://www.facebook.com");
+    };
+    
+    function windows(){
+        var win = window.open("http://www.google.com", "win", "width = 900, height=400, top = 100, scrollbars = yes, resizable = yes" );
+        var win1 = window.open("http://www.youtube.com", "win1", "width = 900, height=400px, top = 350px, left = 200px, scrollbars = yes, resizable = yes");
+        var win2 = window.open("http://www.facebook.com", "win2", "width = 900, height=400px, top = 200px, left = 500px, scrollbars = yes, resizable = yes");
+    };
+</script> 
+</html>
