@@ -12,7 +12,7 @@ public class WindowHandling {
 	public static void main(String[] args) throws InterruptedException {
 		System.setProperty("webdriver.chrome.driver", ".\\drivers\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
-		driver.get("https://learn.letskodeit.com/p/practice");
+		driver.get("file:///E:/SSTS/sony/selenium_concepts/frames/framesDemo.html");
 		driver.manage().window().maximize();
 
 		// locate open window button and click on it
