@@ -1,9 +1,12 @@
 Alert interface methods
 
 accept() - clicks on OK button of the alert
+
 dismiss() - clicks on cancel button of the alert if it contains 
 else it click ok button of alert
+
 getText() returns String value i.e. the text of alert
+
 sendKeys(String arg) send some data to the text field of alert if 
 it contains any
 
