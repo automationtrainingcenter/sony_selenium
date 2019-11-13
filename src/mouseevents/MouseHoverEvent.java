@@ -27,9 +27,9 @@ public class MouseHoverEvent extends BrowserHelper {
 		sleep(2000);
 
 		actions.moveToElement(babyGirl).build().perform();
-		sleep(2000);
+		sleep(4000);
 
-		WebElement partyWear = driver.findElement(By.cssSelector("a[title = 'Ethnic Wear']"));
+		WebElement partyWear = driver.findElement(By.cssSelector("a[title = 'Party Wear']"));
 		actions.moveToElement(partyWear).click().build().perform();
 		sleep(5000);
 
