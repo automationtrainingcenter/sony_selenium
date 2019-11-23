@@ -15,7 +15,7 @@ public class ScrollPageDemo extends BrowserHelper {
 
 		js.executeScript("document.documentElement.scrollBy(0, arguments[0])", -200);
 		sleep(3000);
-
+ 
 		/*
 		 * document.documentElement.scrollHeight will return the scroll height of the
 		 * web page document.documentElement.clientHeight will return the view height of

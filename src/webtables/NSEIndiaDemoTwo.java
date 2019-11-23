@@ -3,6 +3,7 @@ package webtables;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -15,7 +16,9 @@ public class NSEIndiaDemoTwo extends BrowserHelper {
 		String companyCode = "TITAN";
 		openBrowser("chrome",
 				"https://www.nseindia.com/live_market/dynaContent/live_watch/pre_open_market/pre_open_market.htm");
-		WebDriverWait wait = new WebDriverWait(driver, 30);
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		// create a JavascriptExecutor interface reference
+		JavascriptExecutor js = (JavascriptExecutor) driver;
 		// locate table body
 		WebElement tbody = wait
 				.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("#preOpenNiftyTab>tbody")));
@@ -28,7 +31,10 @@ public class NSEIndiaDemoTwo extends BrowserHelper {
 			// get the inner text of the first cell which contains company code
 			if (cells.get(0).getText().equals(companyCode)) {
 				// locate a link inside that cell and click on it
-				cells.get(0).findElement(By.tagName("a")).click();
+				WebElement comLink = cells.get(0).findElement(By.tagName("a"));
+				js.executeScript("arguments[0].scrollIntoView()", comLink);
+				sleep(4000);
+				comLink.click();
 				sleep(4000);
 				break;
 			}
@@ -36,5 +42,7 @@ public class NSEIndiaDemoTwo extends BrowserHelper {
 		closeBrowser();
 
 	}
+
+	
 
 }

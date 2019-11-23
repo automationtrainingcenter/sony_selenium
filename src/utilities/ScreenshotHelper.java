@@ -13,6 +13,7 @@ import java.util.Date;
 
 import javax.imageio.ImageIO;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -24,6 +25,10 @@ public class ScreenshotHelper {
 		DateFormat df = new SimpleDateFormat("dd_MMM_yy-HH_mm_ss");
 		return df.format(date);
 	}
+	
+	/**
+	 * captures the screenshot of page without alert
+	 */
 
 	public static void captureScreenshot(WebDriver driver, String folderName, String fileName) {
 		// create TakesScreenshot object reference
@@ -37,6 +42,9 @@ public class ScreenshotHelper {
 		}
 	}
 
+	/**
+	 * captures the screenshot of web page which contains alert
+	 */
 	public static void captureScreenshot(String folderName, String fileName) {
 		try {
 			Robot r = new Robot();
@@ -47,6 +55,21 @@ public class ScreenshotHelper {
 			ImageIO.write(bi, "png", desImg);
 		} catch (Exception e) {
 			e.printStackTrace();
+		}
+	}
+	/**
+	 * captures screenshots of entire web page
+	 */
+	
+	
+	public static void captureMultipleScreenshots(WebDriver driver, String folderName, String fileName) {
+		JavascriptExecutor js = (JavascriptExecutor)driver;
+		long sh = (long) js.executeScript("return document.documentElement.scrollHeight");
+		long vh = (long) js.executeScript("return document.documentElement.clientHeight");
+		while(sh > 0) {
+			captureScreenshot(driver, folderName, fileName);
+			js.executeScript("document.documentElement.scrollBy(0, arguments[0])", vh);
+			sh -= vh;
 		}
 	}
 
