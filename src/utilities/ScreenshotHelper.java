@@ -30,7 +30,7 @@ public class ScreenshotHelper {
 	 * captures the screenshot of page without alert
 	 */
 
-	public static void captureScreenshot(WebDriver driver, String folderName, String fileName) {
+	public static String captureScreenshot(WebDriver driver, String folderName, String fileName) {
 		// create TakesScreenshot object reference
 		TakesScreenshot ts = (TakesScreenshot) driver;
 		File srcImg = ts.getScreenshotAs(OutputType.FILE);
@@ -40,6 +40,7 @@ public class ScreenshotHelper {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		return desImg.getAbsolutePath();
 	}
 
 	/**

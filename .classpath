@@ -11,5 +11,19 @@
 	<classpathentry kind="lib" path="E:/selenium/softwares/selenium-java-3.141.59/libs/okio-1.14.0.jar"/>
 	<classpathentry kind="lib" path="E:/selenium/softwares/commons-io-2.6.jar"/>
 	<classpathentry kind="lib" path="E:/selenium/softwares/sikulixapi-2.0.0.jar"/>
+	<classpathentry kind="lib" path="E:/selenium/softwares/extentreports-4.0.9/extentreports-4.0.9.jar"/>
+	<classpathentry kind="lib" path="E:/selenium/softwares/extentreports-4.0.9/dependency/bsh-2.0b4.jar"/>
+	<classpathentry kind="lib" path="E:/selenium/softwares/extentreports-4.0.9/dependency/bson-3.3.0.jar"/>
+	<classpathentry kind="lib" path="E:/selenium/softwares/extentreports-4.0.9/dependency/commons-codec-1.9.jar"/>
+	<classpathentry kind="lib" path="E:/selenium/softwares/extentreports-4.0.9/dependency/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="E:/selenium/softwares/extentreports-4.0.9/dependency/freemarker-2.3.23.jar"/>
+	<classpathentry kind="lib" path="E:/selenium/softwares/extentreports-4.0.9/dependency/gson-2.8.5.jar"/>
+	<classpathentry kind="lib" path="E:/selenium/softwares/extentreports-4.0.9/dependency/httpclient-4.5.2.jar"/>
+	<classpathentry kind="lib" path="E:/selenium/softwares/extentreports-4.0.9/dependency/httpcore-4.4.4.jar"/>
+	<classpathentry kind="lib" path="E:/selenium/softwares/extentreports-4.0.9/dependency/httpmime-4.5.2.jar"/>
+	<classpathentry kind="lib" path="E:/selenium/softwares/extentreports-4.0.9/dependency/jcommander-1.48.jar"/>
+	<classpathentry kind="lib" path="E:/selenium/softwares/extentreports-4.0.9/dependency/mongodb-driver-3.3.0.jar"/>
+	<classpathentry kind="lib" path="E:/selenium/softwares/extentreports-4.0.9/dependency/mongodb-driver-core-3.3.0.jar"/>
+	<classpathentry kind="lib" path="E:/selenium/softwares/extentreports-4.0.9/dependency/testng-6.9.10.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
